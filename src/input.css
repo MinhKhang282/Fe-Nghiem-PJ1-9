@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+    /* ======== COLORS ========== */
+    --color-main: #ffffff;
+    --color-primary: #292f3a;
+    --color-text-heading: #2d3958;
+    --color-text-desc: #7b88a8;
+    --color-button: #886cff;
+
+    /* ========= TYPOGRAPHY ======= */
+    --font-family-base: "Outfit", sans-serif;
+    --font-family-primary: "DM Sans", sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi: 600;
+    --font-weight-bold: 700;
+
+    --line-height-normal: 1.6;
+    --line-height-medium: 1.8;
+
+    /* ======= SPACING ======== */
+    --container-width: 1170px;
+    --button-height: 56px;
+}
+
+/* Base styles */
+@layer base {
+    body {
+        font-family: var(--font-family-base);
+        font-weight: var(--font-weight-normal);
+        /* line-height: var(--line-height-normal); */
+        color: var(--color-main);
+        background: var(--color-main);
+    }
+
+    button {
+        cursor: pointer;
+        color: #ffffff;
+    }
+}
+
+@layer utilities {
+    .container {
+        max-width: var(--container-width);
+        width: 100%;
+        margin-inline: auto;
+        padding-inline: 20px;
+    }
+
+    .container-section {
+        max-width: 1400px;
+        width: 100%;
+        margin-inline: auto;
+        padding-inline: 20px;
+    }
+
+    .container-section-1 {
+        max-width: 1300px;
+        width: 100%;
+        margin-inline: auto;
+        padding-inline: 20px;
+    }
+}
+
+@layer component {
+    .btn {
+        background: var(--color-button);
+        /* height: var(--button-height); */
+        padding: 15px 32px;
+        /* width: 129px; */
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+
+    .btn-submit {
+        background: var(--color-button);
+        /* height: var(--button-height); */
+        padding: 15px 32px;
+        /* width: 129px; */
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+
+    .image {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .shdow {
+        box-shadow: 0px 20px 50px 0px #4f77ff33;
+    }
+
+    .bg-linear {
+        background: linear-gradient(185.78deg, #61dcdf 0.38%, #886cff 100%);
+        box-shadow: 0px 20px 50px 0px #4f77ff33;
+    }
+}
